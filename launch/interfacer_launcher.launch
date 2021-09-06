@@ -1,0 +1,6 @@
+<launch>
+  <node name="mqtt_bridge" pkg="mqtt_bridge" type="mqtt_bridge_node.py" output="screen">
+    <rosparam command="load" file="$(find mqtt_bridge)/config/room_interfacer_params.yaml" />
+  </node>
+  <node name="room_interface" pkg="room_interface" type="interfacer" output="screen"/>
+</launch>
